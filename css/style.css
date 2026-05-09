@@ -1,0 +1,563 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+body{
+    background  :#111;
+    color       :white;
+    font-family :Arial, Helvetica, sans-serif;
+    min-height  :100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    /* background-image:url("https://cdn.pixabay.com/photo/2020/04/28/13/17/tulips-5104494_1280.jpg");
+*/
+
+    background-image:url("https://cdn.pixabay.com/photo/2015/02/28/11/54/background-image-653465_1280.jpg");
+
+    
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+.app{
+    width:100%;
+    max-width:430px;
+    text-align: center;
+
+}
+
+.card{
+    background:#000;
+    border-radius:25px;
+    overflow:hidden;
+    border:1px solid #2a2a2a;
+}
+
+/*
+.card{
+    animation:fade .4s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+*/
+
+
+.post-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.profile img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile h3{
+    font-size:15px;
+}
+
+.profile span{
+    color:#999;
+    font-size:12px;
+}
+
+.post-image img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+.post-actions{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+
+    font-size:24px;
+}
+
+.left-actions{
+    display:flex;
+    gap:15px;
+}
+
+.post-content{
+    padding:0 15px 20px;
+}
+
+.likes{
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.caption{
+    line-height:1.5;
+    font-size:15px;
+}
+
+.buttons{
+    margin-top:20px;
+
+    display:flex;
+    gap:10px;
+}
+
+button{
+    flex:1;
+
+    border:none;
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#ff3b7d;
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.hidden{
+    display:none;
+}
+
+.modal-content{
+    width:100%;
+    max-width:400px;
+
+    background:#1b1b1b;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2a2a2a;
+    color:white;
+}
+
+textarea{
+    resize:none;
+    min-height:120px;
+}
+
+/* TEMPLATE FLORAL */
+.floral{
+    background:linear-gradient(135deg,#ffb6d9,#fff0f6);
+    color:#222;
+}
+
+.floral{
+    background:
+    linear-gradient(
+        135deg,
+        #ffd1e6,
+        #fff0f6
+    );
+
+    color:#333;
+
+    overflow:hidden;
+}
+
+.floral-top{
+    display:flex;
+    justify-content:center;
+
+    padding-top:25px;
+}
+
+.floral-profile{
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    object-fit:cover;
+}
+
+.floral-body{
+    padding:20px;
+    text-align:center;
+}
+
+.floral-main-image{
+    width:100%;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    object-fit:cover;
+}
+
+#floralName{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+#floralText{
+    font-size:17px;
+    line-height:1.6;
+}
+
+
+/* -------------------------------------- */ 
+/* TEMPLATE ELEGANT */
+
+.elegant{
+    background:#fff;
+    color:#111;
+}
+
+.elegant{
+    position:relative;
+
+    background:#000;
+
+    overflow:hidden;
+}
+
+.elegant-image{
+    width:100%;
+    height:650px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.elegant-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+
+    display:flex;
+    align-items:flex-end;
+}
+
+.elegant-content{
+    width:100%;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:white;
+}
+
+.elegant-profile{
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+}
+
+#elegantName{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+#elegantText{
+    font-size:17px;
+    line-height:1.6;
+}
+
+
+
+.whatsapp{
+    background:#0b141a;
+
+    overflow:hidden;
+}
+
+.wa-top{
+    background:#202c33;
+
+    padding:15px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.wa-top img{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.wa-top span{
+    color:#9aa6ad;
+    font-size:12px;
+}
+
+.wa-chat{
+    padding:20px;
+
+    min-height:500px;
+
+    background-image:
+    url("https://i.imgur.com/jx17oHT.png");
+
+    background-size:cover;
+}
+
+.message{
+    background:#005c4b;
+
+    padding:14px;
+
+    border-radius:15px 15px 0 15px;
+
+    margin-left:auto;
+
+    width:fit-content;
+
+    max-width:85%;
+}
+
+.message p{
+    line-height:1.5;
+}
+
+.message span{
+    display:block;
+
+    text-align:right;
+
+    font-size:11px;
+
+    opacity:.7;
+
+    margin-top:8px;
+}
+
+/* Whatsapp Template */
+
+.whatsapp{
+    background:#0b141a;
+
+    overflow:hidden;
+}
+
+.wa-top{
+    background:#202c33;
+
+    padding:15px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.wa-top img{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.wa-top span{
+    color:#9aa6ad;
+    font-size:12px;
+}
+
+.wa-chat{
+    padding:20px;
+
+    min-height:500px;
+
+    background-image:
+    url("https://i.imgur.com/jx17oHT.png");
+
+    background-size:cover;
+}
+
+.message{
+    background:#005c4b;
+
+    padding:14px;
+
+    border-radius:15px 15px 0 15px;
+
+    margin-left:auto;
+
+    width:fit-content;
+
+    max-width:85%;
+}
+
+.message p{
+    line-height:1.5;
+}
+
+.message span{
+    display:block;
+
+    text-align:right;
+
+    font-size:11px;
+
+    opacity:.7;
+
+    margin-top:8px;
+}
+
+
+/* Spotify Template */
+.spotify{
+    background:
+    linear-gradient(
+        180deg,
+        #535353,
+        #121212
+    );
+
+    padding:30px;
+
+    color:white;
+}
+
+.spotify-content{
+    text-align:center;
+}
+
+.spotify-image{
+    width:100%;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.playing{
+    font-size:12px;
+    letter-spacing:2px;
+
+    opacity:.7;
+
+    margin-bottom:15px;
+}
+
+#spotifyName{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+#spotifyText{
+    opacity:.8;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+}
+
+.spotify-bar{
+    width:100%;
+    height:5px;
+
+    background:#333;
+
+    border-radius:999px;
+
+    overflow:hidden;
+}
+
+.spotify-progress{
+    width:65%;
+    height:100%;
+
+    background:white;
+}
+
+
+
+.hidden-template{
+    display:none;
+}

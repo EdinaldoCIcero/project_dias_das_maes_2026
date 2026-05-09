@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dia das Mães ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <h1 class="dia_mae">Feliz Dia das Mães ❤️</h1>
+
+        <div class="card instagram" id="capture">
+
+            <div class="post-top">
+
+                <div class="profile">
+
+                    <img id="profileImage"
+                        src="https://placehold.co/100x100"
+                        alt="Foto">
+
+                    <div>
+                        <h3 id="motherName">Nome da Mãe</h3>
+                        <span>1 min atrás</span>
+                    </div>
+
+                </div>
+
+                <i class="fa-solid fa-ellipsis"></i>
+
+            </div>
+
+            <div class="post-image">
+
+                <img id="mainImage"
+                    src="https://placehold.co/600x600"
+                    alt="Imagem">
+
+            </div>
+
+            <div class="post-actions">
+
+                <div class="left-actions">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+
+                <i class="fa-regular fa-bookmark"></i>
+
+            </div>
+
+            <div class="post-content">
+
+                <p class="likes">
+                    Curtido por <strong>você</strong> e outras pessoas ❤️
+                </p>
+
+                <p class="caption">
+                    <strong id="captionName">Mamãe</strong>
+                    <span id="motherText">
+                        Obrigado por tudo mãe ❤️
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+        <!-- Floral  -->
+        <div class="card floral hidden-template" id="floralCard">
+
+            <div class="floral-top">
+                <img
+                    id="floralProfile"
+                    class="floral-profile"
+                    src="https://placehold.co/100x100">
+            </div>
+
+            <div class="floral-body">
+
+                <img
+                    id="floralMainImage"
+                    class="floral-main-image"
+                    src="https://placehold.co/600x600">
+
+                <h1 id="floralName">
+                    Mamãe ❤️
+                </h1>
+
+                <p id="floralText">
+                    Obrigado por tudo mãe ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Elegante  -->
+        <div class="card elegant hidden-template" id="elegantCard">
+
+            <img
+                id="elegantImage"
+                class="elegant-image"
+                src="https://placehold.co/600x800">
+
+            <div class="elegant-overlay">
+
+                <div class="elegant-content">
+
+                    <img
+                        id="elegantProfile"
+                        class="elegant-profile"
+                        src="https://placehold.co/100x100">
+
+                    <h1 id="elegantName">
+                        Mamãe ❤️
+                    </h1>
+
+                    <p id="elegantText">
+                        Obrigado por tudo ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- whatsapp  -->
+        
+        <div class="card whatsapp hidden-template" id="whatsappCard">
+
+                <div class="wa-top">
+                    <img
+                        id="waProfile"
+                        src="https://placehold.co/100">
+
+                    <div>
+                        <h3 id="waName">Mamãe ❤️</h3>
+                        <span>online</span>
+                    </div>
+                </div>
+
+                <div class="wa-chat">
+
+                    <div class="message">
+
+                        <p id="waText">
+                            Obrigado por tudo mãe ❤️
+                        </p>
+
+                        <span>12:30</span>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+        <!-- Spotfy template   -->
+        <div class="card spotify hidden-template" id="spotifyCard">
+
+                <div class="spotify-content">
+
+                    <img
+                        id="spotifyImage"
+                        class="spotify-image"
+                        src="https://placehold.co/600">
+
+                    <p class="playing">
+                        TOCANDO AGORA
+                    </p>
+
+                    <h1 id="spotifyName">
+                        Mamãe ❤️
+                    </h1>
+
+                    <p id="spotifyText">
+                        Obrigado por tudo mãe ❤️
+                    </p>
+
+                    <div class="spotify-bar">
+
+                        <div class="spotify-progress"></div>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+
+
+
+        <div class="buttons">
+
+            <button id="editBtn">
+                Editar
+            </button>
+
+            <button id="saveImageBtn">
+                Salvar Imagem
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- MODAL -->
+
+    <div class="modal hidden" id="modal">
+
+        <div class="modal-content">
+
+            <h2>Editar Card ❤️</h2>
+
+            <input
+                type="text"
+                id="inputName"
+                placeholder="Nome da mãe">
+
+            <textarea id="inputText">
+Mãe ❤️
+Talvez eu nunca consiga explicar em palavras tudo o que você representa pra mim.
+Obrigado por cada conselho, cada abraço, cada momento difícil em que você esteve ao meu lado mesmo sem eu perceber.
+Você é meu porto seguro, minha inspiração e uma das pessoas mais importantes da minha vida.
+Nada no mundo consegue substituir o amor de mãe.
+Feliz Dia das Mães 🌸
+Te amo infinitamente ❤️
+            </textarea>
+
+            <input
+                type="file"
+                id="inputImage"
+                accept="image/*">
+
+            <select id="templateSelect">
+
+                <option value="instagram">
+                    Instagram
+                </option>
+
+                <option value="floral">
+                    Floral
+                </option>
+
+                <option value="elegant">
+                    Elegante
+                </option>
+
+                <option value="whatsapp">
+                    WhatsApp
+                </option>
+
+                <option value="spotify">
+                    Spotify
+                </option>
+
+
+            </select>
+
+            <button id="saveBtn">
+                Salvar
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
